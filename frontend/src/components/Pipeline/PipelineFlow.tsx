@@ -116,14 +116,14 @@ export function PipelineFlow() {
   }, [initialNodes, initialEdges, setNodes, setEdges]);
 
   return (
-    <div className="h-full bg-gray-50">
+    <div className="h-full bg-gray-900">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+      <div className="bg-gray-800 border-b border-gray-700 px-4 py-3 flex items-center justify-between">
         <div>
-          <h2 className="text-lg font-semibold text-gray-900">
+          <h2 className="text-lg font-semibold text-gray-100">
             Pipeline Visualisierung
           </h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             {currentPipeline?.name || 'No pipeline selected'}
           </p>
         </div>
@@ -151,17 +151,18 @@ export function PipelineFlow() {
           minZoom={0.5}
           maxZoom={1.5}
         >
-          <Background color="#e5e7eb" gap={20} />
-          <Controls />
+          <Background color="#374151" gap={20} />
+          <Controls className="[&>button]:bg-gray-700 [&>button]:border-gray-600 [&>button]:text-gray-300 [&>button:hover]:bg-gray-600" />
           <MiniMap
             nodeColor={(node) => {
               const status = node.data?.status;
               if (status === 'completed') return '#22c55e';
               if (status === 'running') return '#3b82f6';
               if (status === 'error') return '#ef4444';
-              return '#9ca3af';
+              return '#6b7280';
             }}
-            maskColor="rgba(255, 255, 255, 0.8)"
+            maskColor="rgba(17, 24, 39, 0.8)"
+            className="bg-gray-800"
           />
         </ReactFlow>
       </div>

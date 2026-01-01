@@ -22,7 +22,7 @@ export function NodeStatus({ status, label }: NodeStatusProps) {
   return (
     <div className="flex items-center gap-1.5">
       <span className={`w-2 h-2 rounded-full ${getColor()}`} />
-      <span className="text-gray-600">{label}</span>
+      <span className="text-gray-300">{label}</span>
     </div>
   );
 }

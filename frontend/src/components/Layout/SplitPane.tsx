@@ -50,8 +50,8 @@ export function SplitPane({ left, right, defaultSplit = 50 }: SplitPaneProps) {
 
       {/* Divider */}
       <div
-        className={`w-1 bg-gray-200 cursor-col-resize hover:bg-primary-400 transition-colors ${
-          isDragging ? 'bg-primary-500' : ''
+        className={`w-1 bg-gray-700 cursor-col-resize hover:bg-primary-500 transition-colors ${
+          isDragging ? 'bg-primary-400' : ''
         }`}
         onMouseDown={handleMouseDown}
       />

@@ -8,7 +8,7 @@ import { PipelineFlow } from './components/Pipeline/PipelineFlow';
 function App() {
   return (
     <ReactFlowProvider>
-      <div className="min-h-screen flex flex-col bg-gray-50">
+      <div className="min-h-screen flex flex-col bg-gray-900">
         <Header />
         <main className="flex-1 flex overflow-hidden">
           <SplitPane

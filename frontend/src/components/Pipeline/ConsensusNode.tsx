@@ -26,7 +26,7 @@ function ConsensusNodeComponent({ data }: NodeProps) {
   };
 
   return (
-    <div className="px-6 py-4 rounded-xl border-2 border-primary-500 bg-white shadow-lg min-w-[200px]">
+    <div className="px-6 py-4 rounded-xl border-2 border-primary-500 bg-gray-800 shadow-lg min-w-[200px]">
       <Handle
         type="target"
         position={Position.Top}
@@ -35,14 +35,14 @@ function ConsensusNodeComponent({ data }: NodeProps) {
 
       {/* Header */}
       <div className="flex items-center gap-2 mb-3">
-        <TrendingUp className="w-5 h-5 text-primary-600" />
-        <span className="text-sm font-semibold text-gray-900">
+        <TrendingUp className="w-5 h-5 text-primary-400" />
+        <span className="text-sm font-semibold text-gray-100">
           Consensus Score
         </span>
         {status === 'completed' ? (
           <CheckCircle className="w-4 h-4 text-green-500 ml-auto" />
         ) : (
-          <Clock className="w-4 h-4 text-gray-400 ml-auto animate-pulse" />
+          <Clock className="w-4 h-4 text-gray-500 ml-auto animate-pulse" />
         )}
       </div>
 
@@ -54,7 +54,7 @@ function ConsensusNodeComponent({ data }: NodeProps) {
       </div>
 
       {/* Progress Bar */}
-      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
         <div
           className={`h-full ${getProgressColor()} transition-all duration-500`}
           style={{ width: `${percentage}%` }}
@@ -62,7 +62,7 @@ function ConsensusNodeComponent({ data }: NodeProps) {
       </div>
 
       {/* Description */}
-      <div className="mt-2 text-xs text-gray-500 text-center">
+      <div className="mt-2 text-xs text-gray-400 text-center">
         {percentage >= 80
           ? 'High agreement between models'
           : percentage >= 60

@@ -32,13 +32,13 @@ function LLMNodeComponent({ data }: NodeProps) {
   const getStatusColor = () => {
     switch (status) {
       case 'running':
-        return 'border-blue-500 bg-blue-50';
+        return 'border-blue-500 bg-blue-900/50';
       case 'completed':
-        return 'border-green-500 bg-green-50';
+        return 'border-green-500 bg-green-900/50';
       case 'error':
-        return 'border-red-500 bg-red-50';
+        return 'border-red-500 bg-red-900/50';
       default:
-        return 'border-gray-300 bg-white';
+        return 'border-gray-600 bg-gray-800';
     }
   };
 
@@ -63,7 +63,7 @@ function LLMNodeComponent({ data }: NodeProps) {
       <div className="flex items-center justify-between gap-2 mb-2">
         <div className="flex items-center gap-2">
           {getStatusIcon()}
-          <span className="text-xs font-medium text-gray-600 uppercase">
+          <span className="text-xs font-medium text-gray-400 uppercase">
             {provider}
           </span>
         </div>
@@ -71,7 +71,7 @@ function LLMNodeComponent({ data }: NodeProps) {
       </div>
 
       {/* Model Name */}
-      <div className="text-sm font-semibold text-gray-900 truncate">
+      <div className="text-sm font-semibold text-gray-100 truncate">
         {label}
       </div>
 
@@ -92,7 +92,7 @@ function LLMNodeComponent({ data }: NodeProps) {
 
       {/* Output Preview */}
       {status === 'completed' && output && (
-        <div className="mt-2 p-2 bg-white rounded border border-gray-200 text-xs text-gray-600 max-h-20 overflow-hidden">
+        <div className="mt-2 p-2 bg-gray-900 rounded border border-gray-700 text-xs text-gray-300 max-h-20 overflow-hidden">
           {output.substring(0, 100)}
           {output.length > 100 && '...'}
         </div>
@@ -100,7 +100,7 @@ function LLMNodeComponent({ data }: NodeProps) {
 
       {/* Error Message */}
       {status === 'error' && error && (
-        <div className="mt-2 p-2 bg-red-100 rounded text-xs text-red-700">
+        <div className="mt-2 p-2 bg-red-900/50 rounded text-xs text-red-300">
           {error}
         </div>
       )}

@@ -19,9 +19,9 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
 
   if (messages.length === 0 && !isLoading) {
     return (
-      <div className="h-full flex items-center justify-center text-gray-500">
+      <div className="h-full flex items-center justify-center text-gray-400">
         <div className="text-center">
-          <p className="text-lg font-medium">Start a conversation</p>
+          <p className="text-lg font-medium text-gray-300">Start a conversation</p>
           <p className="text-sm mt-1">
             Your message will be processed through the consensus pipeline
           </p>
@@ -37,7 +37,7 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
       ))}
 
       {isLoading && (
-        <div className="flex items-center gap-2 text-gray-500 p-4">
+        <div className="flex items-center gap-2 text-gray-400 p-4">
           <Loader2 className="w-5 h-5 animate-spin" />
           <span>Processing through pipeline...</span>
         </div>
