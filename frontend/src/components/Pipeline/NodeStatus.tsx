@@ -1,4 +1,4 @@
-import { NodeStatus as NodeStatusType } from '../../types/pipeline';
+import type { NodeStatus as NodeStatusType } from '../../types/pipeline';
 
 interface NodeStatusProps {
   status: NodeStatusType;

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Handle, Position, NodeProps } from '@xyflow/react';
 import { Bot, Loader2, CheckCircle, XCircle, Sparkles } from 'lucide-react';
-import { NodeStatus } from '../../types/pipeline';
+import type { NodeStatus } from '../../types/pipeline';
 
 interface LLMNodeData {
   label: string;

@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useChatStore } from '../stores/chatStore';
 import { usePipelineStore } from '../stores/pipelineStore';
 import { useWebSocket } from './useWebSocket';
-import { Message } from '../types/message';
+import type { Message } from '../types/message';
 import { api } from '../lib/api';
 
 export function useChat() {

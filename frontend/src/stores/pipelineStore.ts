@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { PipelineConfig, PipelineState, NodeState, NodeStatus } from '../types/pipeline';
+import type { PipelineConfig, PipelineState, NodeState, NodeStatus } from '../types/pipeline';
 
 interface PipelineStore {
   // Current pipeline config

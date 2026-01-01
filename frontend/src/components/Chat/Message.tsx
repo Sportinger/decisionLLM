@@ -1,4 +1,4 @@
-import { Message as MessageType } from '../../types/message';
+import type { Message as MessageType } from '../../types/message';
 import { User, Bot, TrendingUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 

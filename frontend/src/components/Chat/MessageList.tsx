@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Message as MessageType } from '../../types/message';
+import type { Message as MessageType } from '../../types/message';
 import { Message } from './Message';
 import { Loader2 } from 'lucide-react';
 

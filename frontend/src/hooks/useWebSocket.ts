@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback, useState } from 'react';
 import { usePipelineStore } from '../stores/pipelineStore';
-import { NodeUpdateEvent, PipelineUpdateEvent } from '../types/pipeline';
+import type { NodeUpdateEvent, PipelineUpdateEvent } from '../types/pipeline';
 
 const WS_URL = 'ws://localhost:8000/ws/pipeline';
 
